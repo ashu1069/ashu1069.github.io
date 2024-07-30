@@ -12,7 +12,7 @@ Welcome to my blog section. Here are some of my featured articles from Medium:
 ## Featured Articles
 
 <div class="blog-preview">
-  <img src="docs/assets/images/image_0.png" alt="Preview of Blog 1">
+  <img src="docs/assets/image_0.png" alt="Preview of Blog 1">
   <div class="blog-info">
     <h3><a href="https://medium.com/@ashu1069/moonmetasync-lunar-image-registration-analysis-2aca774f780d?sk=0793011eecb40414061dcb80f7154f33" target="_blank">MoonMetaSync: Lunar Image Registration Analysis</a></h3>
     <p>An image registration analysis using SIFT, SURF, and IntFeat.</p>
@@ -20,7 +20,7 @@ Welcome to my blog section. Here are some of my featured articles from Medium:
 </div>
 
 <div class="blog-preview">
-  <img src="docs/assets/images/pawel-czerwinski-VhDgReMsz8w-unsplash.jpg" alt="Preview of Blog 2">
+  <img src="docs/assets/pawel-czerwinski-VhDgReMsz8w-unsplash.jpg" alt="Preview of Blog 2">
   <div class="blog-info">
     <h3><a href="https://medium.com/@ashu1069/dynamizing-arrays-be949b7395eb" target="_blank">Dynamizing Arrays</a></h3>
     <p>For a dynamic array, there’s a pre-defined memory capacity allocation and the elements of the array are stored in those memory locations. However, if the array size grows beyond the existing capacity, all the existing elements of the array are copied to a new location with increased capacity. Why is it necessary?</p>
@@ -28,7 +28,7 @@ Welcome to my blog section. Here are some of my featured articles from Medium:
 </div>
 
 <div class="blog-preview">
-  <img src="docs/assets/images/simon-lee-EXgCBYk4wCc-unsplash (1).jpg" alt="Preview of Blog 3">
+  <img src="docs/assets/simon-lee-EXgCBYk4wCc-unsplash (1).jpg" alt="Preview of Blog 3">
   <div class="blog-info">
     <h3><a href="https://medium.com/@ashu1069/image-recognition-using-pca-0a2cb14508fc?sk=81c44a9cecfc284828982ceee39bc3c1" target="_blank">Image Recognition using PCA</a></h3>
     <p>Building an image recognition module using Principal Component Analysis.</p>
