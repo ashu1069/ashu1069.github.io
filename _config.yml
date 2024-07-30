@@ -4,15 +4,15 @@ description: Personal website of Ashutosh Kumar
 theme: just-the-docs
 
 url: https://ashu1069.github.io
-baseurl: https://ashu1069.github.io
+baseurl: ""
 
-nav_external_links:
-  - title: Research
-    url: /docs/research
-  - title: Blog
-    url: /docs/blog
-  - title: Resume
-    url: /docs/resume
+# nav_external_links:
+#   - title: Research
+#     url: /docs/research
+#   - title: Blog
+#     url: /docs/blog
+#   - title: Resume
+#     url: /docs/resume
 
 aux_links:
   GitHub: https://github.com/ashu1069/ashu1069.github.io
