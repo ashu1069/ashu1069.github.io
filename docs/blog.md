@@ -4,3 +4,4 @@ permalink: /blog/
 ---
 
 # Medium
+CV
