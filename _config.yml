@@ -4,7 +4,7 @@ description: Personal website of Ashutosh Kumar
 theme: just-the-docs
 
 url: https://ashu1069.github.io
-baseurl: ""
+baseurl: "https://ashu1069.github.io"
 
 nav_external_links:
   - title: Research
