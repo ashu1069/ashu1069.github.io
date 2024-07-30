@@ -1,10 +1,23 @@
 title: Ashutosh Kumar
-description: None
+description: Personal website of Ashutosh Kumar
+
 theme: just-the-docs
 
 url: https://ashu1069.github.io
-baseurl: https://ashu1069.github.io
+baseurl: ""
+
+nav_external_links:
+  - title: Research
+    url: /docs/research
+  - title: Blog
+    url: /docs/blog
+  - title: Resume
+    url: /docs/resume
 
 aux_links:
-  Template Repository: https://ashu1069.github.io
+  GitHub: https://github.com/ashu1069
 
+# Optional: Add these if you want to customize your site further
+# color_scheme: dark
+# logo: "/assets/images/logo.png"
+# favicon_ico: "/assets/images/favicon.ico"
