@@ -4,6 +4,7 @@ description: Personal website of Ashutosh Kumar
 theme: just-the-docs
 
 url: https://ashu1069.github.io
+baseurl: https://ashu1069.github.io
 
 nav_external_links:
   - title: Research
@@ -14,7 +15,7 @@ nav_external_links:
     url: /docs/resume
 
 aux_links:
-  GitHub: https://github.com/ashu1069
+  GitHub: https://github.com/ashu1069/ashu1069.github.io
 
 # Optional: Add these if you want to customize your site further
 # color_scheme: dark
