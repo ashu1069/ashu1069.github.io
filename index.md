@@ -14,7 +14,7 @@ Outside academia, I am a huge fan of cricket. I love to read books, write poetry
 <style>
   .social-links {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     margin-top: 30px;
   }
