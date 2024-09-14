@@ -1,8 +1,7 @@
 ---
+title: About
 layout: home
 ---
-
-# Welcome to My Portfolio
 
 <img src="/assets/DP1.jpg" alt="Profile Picture" style="width: 200px; border-radius: 50%; display: block; margin: 0 auto;">
 
@@ -25,19 +24,28 @@ Outside academia, I am a huge fan of cricket. I love to read books, write poetry
     margin: 0 10px 10px;
     text-decoration: none;
     color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
   }
   .social-link:hover {
-    color: #0056b3;
+    transform: translateY(-3px);
+  }
+  .social-link img {
+    width: 30px;
+    height: 30px;
   }
 </style>
 
 <div class="social-links">
-  <a href="/assets/Resume_Ashutosh_Kumar.pdf" class="social-link" target="_blank">Resume</a>
-  <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=4iXjBjoAAAAJ" class="social-link" target="_blank">Google Scholar</a>
-  <a href="https://twitter.com/ashu_1069" class="social-link" target="_blank">Twitter</a>
-  <a href="https://github.com/ashu1069" class="social-link" target="_blank">GitHub</a>
-  <a href="https://medium.com/@ashu1069" class="social-link" target="_blank">Medium</a>
-  <a href="https://www.linkedin.com/in/ashutoshkumar1069/" class="social-link" target="_blank">LinkedIn</a>
+  <a href="https://drive.google.com/drive/u/1/folders/1dBA3fQHeeIlifONIuSzaO_WFGTCpyiu5" class="social-link" target="_blank" title="Resume">
+  </a>
+  <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=4iXjBjoAAAAJ" class="social-link" target="_blank" title="Google Scholar">
+  </a>
+  <a href="https://twitter.com/ashu_1069" class="social-link" target="_blank" title="Twitter">
+  </a>
+  <a href="https://github.com/ashu1069" class="social-link" target="_blank" title="GitHub">
+  </a>
+  <a href="https://medium.com/@ashu1069" class="social-link" target="_blank" title="Medium">
+  </a>
+  <a href="https://www.linkedin.com/in/ashutoshkumar1069/" class="social-link" target="_blank" title="LinkedIn">
+  </a>
 </div>
