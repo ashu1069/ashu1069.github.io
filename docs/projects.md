@@ -82,7 +82,7 @@ permalink: /projects/
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0366d6;
+  background-color: #F36B24;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -90,6 +90,6 @@ permalink: /projects/
   margin-right: 10px;
 }
 .btn:hover {
-  background-color: #F36B24;
+  background-color: #024ea4;
 }
 </style>
