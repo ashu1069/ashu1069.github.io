@@ -9,38 +9,38 @@ permalink: /projects/
 ### Computer Vision & Deep Learning
 
 <div class="project-preview">
-  <img src="/assets/syncvision.png" alt="SyncVision">
+  <img src="/assets/chmyphotography-qI5XixBb6TU-unsplash.jpg" alt="Perceptual Piercing">
   <div class="project-info">
-    <h3>SyncVision</h3>
-    <p>A Python package for image registration using SIFT, SURF, and IntFeat.</p>
-    <a href="https://github.com/yourusername/syncvision" target="_blank" class="btn">Code</a>
-    <a href="https://arxiv.org/abs/yourpaperid" target="_blank" class="btn">Paper</a>
+    <h3>Perceptual Piercing</h3>
+    <p>Human visual-cue based object detection in low-visibility conditions.</p>
+    <a href="https://github.com/ashu1069/Perceptual-Piercing" target="_blank" class="btn">Code</a>
+    <!-- <a href="https://arxiv.org/abs/yourpaperid" target="_blank" class="btn">Paper</a> -->
   </div>
 </div>
 
 <div class="project-preview">
-  <img src="/assets/perceptual_piercing.png" alt="Perceptual Piercing">
+  <img src="/assets/david-travis-aVvZJC0ynBQ-unsplash.jpg" alt="Syncvision">
   <div class="project-info">
-    <h3>Perceptual Piercing</h3>
-    <p>Human visual-cue based object detection in low-visibility conditions.</p>
-    <a href="https://github.com/yourusername/perceptual-piercing" target="_blank" class="btn">Code</a>
-    <a href="https://arxiv.org/abs/yourpaperid" target="_blank" class="btn">Paper</a>
+    <h3>SyncVision</h3>
+    <p>A Python package for image registration using SIFT, SURF, and IntFeat.</p>
+    <a href="https://github.com/ashu1069/MoonMetaSync" target="_blank" class="btn">Code</a>
+    <a href="https://docs.google.com/presentation/d/1OlsNJfy8PLWCZIQMYMC-R4MskUJVrBvqDsS9An4IHDA/edit?usp=sharing" target="_blank" class="btn">Poster</a>
   </div>
 </div>
 
 ### Generative AI
 
 <div class="project-preview">
-  <img src="/assets/hierarchical_prompting_taxonomy.png" alt="Hierarchical Prompting Taxonomy">
+  <img src="/assets/framework (3)_page-0001.jpg" alt="Hierarchical Prompting Taxonomy">
   <div class="project-info">
     <h3>Hierarchical Prompting Taxonomy</h3>
     <p>A universal evaluation framework for LLMs using hierarchical and manual prompting.</p>
-    <a href="https://github.com/yourusername/hierarchical-prompting-taxonomy" target="_blank" class="btn">Code</a>
-    <a href="https://arxiv.org/abs/yourpaperid" target="_blank" class="btn">Paper</a>
+    <a href="https://github.com/devichand579/HPT" target="_blank" class="btn">Code</a>
+    <a href="https://arxiv.org/pdf/2406.12644" target="_blank" class="btn">Paper</a>
   </div>
 </div>
 
-<div class="project-preview">
+<!-- <div class="project-preview">
   <img src="/assets/indicmmlu_pro.png" alt="IndicMMLU-Pro">
   <div class="project-info">
     <h3>IndicMMLU-Pro</h3>
@@ -48,11 +48,11 @@ permalink: /projects/
     <a href="https://github.com/yourusername/indicmmlu-pro" target="_blank" class="btn">Code</a>
     <a href="https://arxiv.org/abs/yourpaperid" target="_blank" class="btn">Paper</a>
   </div>
-</div>
+</div> -->
 
 ### Operations Research
 
-<div class="project-preview">
+<!-- <div class="project-preview">
   <img src="/assets/vaccine_prioritization.png" alt="Vaccine Prioritization">
   <div class="project-info">
     <h3>A Data Fusion Pipeline for Vaccine Prioritization</h3>
@@ -60,7 +60,7 @@ permalink: /projects/
     <a href="https://github.com/yourusername/vaccine-prioritization" target="_blank" class="btn">Code</a>
     <a href="https://arxiv.org/abs/yourpaperid" target="_blank" class="btn">Paper</a>
   </div>
-</div>
+</div> -->
 
 <style>
 .project-preview {
