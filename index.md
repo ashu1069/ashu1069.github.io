@@ -30,7 +30,7 @@ Outside academia, I am a huge fan of cricket. I love to read books, write poetry
 </style>
 
 <div class="social-links">
-  <a href="mailto:ak1825@rit.edu" class="social-link email-link" title="Email me">✉</a>
+  <a href="mailto:ak1825@rit.edu" class="social-link email-link" title="Email me">Email Me ✉</a>
   <a href="https://drive.google.com/drive/u/1/folders/1dBA3fQHeeIlifONIuSzaO_WFGTCpyiu5" class="social-link" target="_blank">Resume</a>
   <a href="https://www.linkedin.com/in/ashutoshkumar1069/" class="social-link" target="_blank">LinkedIn</a>
   <a href="https://github.com/ashu1069" class="social-link" target="_blank">GitHub</a>

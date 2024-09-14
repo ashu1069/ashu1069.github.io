@@ -64,7 +64,7 @@ permalink: /projects/
 .project-preview {
   display: flex;
   margin-bottom: 20px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #F36B24;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -82,7 +82,7 @@ permalink: /projects/
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0366d6;
+  background-color: #F36B24;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -90,6 +90,6 @@ permalink: /projects/
   margin-right: 10px;
 }
 .btn:hover {
-  background-color: #024ea4;
+  background-color: #F36B24;
 }
 </style>
