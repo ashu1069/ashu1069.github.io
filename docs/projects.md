@@ -50,8 +50,6 @@ permalink: /projects/
   </div>
 </div> -->
 
-### Operations Research
-
 <!-- <div class="project-preview">
   <img src="/assets/vaccine_prioritization.png" alt="Vaccine Prioritization">
   <div class="project-info">
