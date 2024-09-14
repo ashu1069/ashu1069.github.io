@@ -3,6 +3,9 @@ description: Personal website of Ashutosh Kumar
 
 theme: just-the-docs
 
+include:
+  - docs
+
 url: https://ashu1069.github.io
 baseurl: ""
 
