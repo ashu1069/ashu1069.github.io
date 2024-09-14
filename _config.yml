@@ -15,7 +15,9 @@ baseurl: ""
 #     url: /docs/resume
 
 aux_links:
-  GitHub: https://github.com/ashu1069/ashu1069.github.io
+  '<i class="fab fa-github"></i> GitHub': https://github.com/ashu1069
+
+aux_links_new_tab: true
 
 # Optional: Add these if you want to customize your site further
 # color_scheme: dark
