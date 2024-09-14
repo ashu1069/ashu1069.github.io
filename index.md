@@ -14,18 +14,25 @@ Outside academia, I am a huge fan of cricket. I love to read books, write poetry
 <style>
   .social-links {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
   }
   .social-link {
-    margin: 0 10px 10px;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 15px 15px;
     text-decoration: none;
     color: #8B63ED;
     font-weight: bold;
+    transition: transform 0.3s ease;
   }
   .social-link:hover {
-    text-decoration: underline;
+    transform: translateY(-3px);
+  }
+  .social-link i {
+    margin-right: 8px;
+    font-size: 1.2em;
   }
 </style>
 
