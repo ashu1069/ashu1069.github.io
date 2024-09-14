@@ -4,9 +4,9 @@ layout: home
 permalink: /projects/
 ---
 
-## Projects
+# Projects
 
-### Computer Vision & Deep Learning
+## Computer Vision & Deep Learning
 
 <div class="project-preview">
   <img src="/assets/chmyphotography-qI5XixBb6TU-unsplash.jpg" alt="Perceptual Piercing">
@@ -28,7 +28,7 @@ permalink: /projects/
   </div>
 </div>
 
-### Generative AI
+## Generative AI
 
 <div class="project-preview">
   <img src="/assets/framework (3)_page-0001.jpg" alt="Hierarchical Prompting Taxonomy">
