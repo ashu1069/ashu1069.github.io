@@ -40,7 +40,7 @@ permalink: /links/
     </a>
   </li>
   <li class="link-item">
-    <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank">
+    <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=4iXjBjoAAAAJ" target="_blank">
       <i class="fas fa-graduation-cap"></i> Google Scholar
     </a>
   </li>
