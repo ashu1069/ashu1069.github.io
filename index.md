@@ -36,12 +36,14 @@ Outside academia, I am a huge fan of cricket. I love to read books, write poetry
   }
 </style>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <div class="social-links">
-  <a href="mailto:ak1825@rit.edu" class="social-link email-link" title="Email me">Email Me ✉</a>
-  <a href="https://drive.google.com/drive/u/1/folders/1dBA3fQHeeIlifONIuSzaO_WFGTCpyiu5" class="social-link" target="_blank">Resume</a>
-  <a href="https://www.linkedin.com/in/ashutoshkumar1069/" class="social-link" target="_blank">LinkedIn</a>
-  <a href="https://github.com/ashu1069" class="social-link" target="_blank">GitHub</a>
-  <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=4iXjBjoAAAAJ" class="social-link" target="_blank">Google Scholar</a>
-  <a href="https://medium.com/@ashu1069" class="social-link" target="_blank">Medium</a>
-  <a href="https://twitter.com/ashu_1069" class="social-link" target="_blank">Twitter</a>
+  <a href="mailto:ak1825@rit.edu" class="social-link" title="Email me"><i class="fas fa-envelope"></i>Email</a>
+  <a href="https://drive.google.com/drive/u/1/folders/1dBA3fQHeeIlifONIuSzaO_WFGTCpyiu5" class="social-link" target="_blank"><i class="fas fa-file-alt"></i>Resume</a>
+  <a href="https://www.linkedin.com/in/ashutoshkumar1069/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+  <a href="https://github.com/ashu1069" class="social-link" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+  <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=4iXjBjoAAAAJ" class="social-link" target="_blank"><i class="fas fa-graduation-cap"></i>Scholar</a>
+  <a href="https://medium.com/@ashu1069" class="social-link" target="_blank"><i class="fab fa-medium"></i>Medium</a>
+  <a href="https://twitter.com/ashu_1069" class="social-link" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
 </div>
