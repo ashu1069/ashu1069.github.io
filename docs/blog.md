@@ -59,13 +59,13 @@ Welcome to my blog section. Here are some of my featured articles from Medium:
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0366d6;
+  background-color: #8B63ED;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 .btn:hover {
-  background-color: #024ea4;
+  background-color: #8B63ED;
 }
 </style>
