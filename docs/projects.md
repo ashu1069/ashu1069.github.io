@@ -14,7 +14,7 @@ permalink: /projects/
     <h3>Perceptual Piercing</h3>
     <p>Human visual-cue based object detection in low-visibility conditions.</p>
     <a href="https://github.com/ashu1069/Perceptual-Piercing" target="_blank" class="btn">Code</a>
-    <!-- <a href="https://arxiv.org/abs/yourpaperid" target="_blank" class="btn">Paper</a> -->
+    <a href="https://arxiv.org/pdf/2410.01225" target="_blank" class="btn">Paper</a>
   </div>
 </div>
 
