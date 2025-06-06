@@ -65,54 +65,72 @@
         }
     </style>
 </head>
-<body class="text-gray-900">
+<body class="text-gray-900 overflow-x-hidden">
 
     <!-- Header Section -->
     <header class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 ease-in-out border-b border-gray-100 shadow-sm">
-        <nav class="container mx-auto px-8 py-5 flex justify-between items-center">
+        <nav class="container mx-auto px-4 md:px-8 py-5 flex justify-between items-center relative">
             <!-- Logo/Site Title -->
-            <a href="index.html" class="text-4xl font-extrabold text-gray-900 hover:text-[#F76902] transition duration-300 transform hover:scale-105">
+            <a href="index.html" class="text-2xl md:text-4xl font-extrabold text-gray-900 hover:text-[#F76902] transition duration-300 transform hover:scale-105">
                 Ashutosh Kumar
             </a>
-
+            <!-- Hamburger Icon (Mobile) -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-700 border-gray-300 hover:text-[#F76902] focus:outline-none" aria-label="Open Menu">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
             <!-- Navigation Links -->
-            <ul class="flex space-x-10">
-                <li><a href="index.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
-                    Home
-                </a></li>
-                <li><a href="about.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
-                    About
-                </a></li>
-                <li><a href="news.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
-                    News
-                </a></li>
-                <li><a href="blogs.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
-                    Blogs
-                </a></li>
-                <li><a href="projects.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
-                    Projects
-                </a></li>
-                <li><a href="index.html#contact-section" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
-                    Contact
-                </a></li>
+            <ul id="desktop-nav" class="hidden md:flex space-x-6 lg:space-x-10">
+                <li><a href="index.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Home</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">About</a></li>
+                <li><a href="news.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">News</a></li>
+                <li><a href="blogs.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Blogs</a></li>
+                <li><a href="projects.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Projects</a></li>
+                <li><a href="index.html#contact-section" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Contact</a></li>
             </ul>
+            <!-- Mobile Menu -->
+            <div id="mobile-nav" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-100 z-50 hidden">
+                <ul class="flex flex-col py-4 space-y-2 px-6">
+                    <li><a href="index.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Home</a></li>
+                    <li><a href="about.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">About</a></li>
+                    <li><a href="news.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">News</a></li>
+                    <li><a href="blogs.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Blogs</a></li>
+                    <li><a href="projects.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Projects</a></li>
+                    <li><a href="index.html#contact-section" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileNav = document.getElementById('mobile-nav');
+        menuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+        // Optional: close menu on link click
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('hidden');
+            });
+        });
+    </script>
 
     <main class="pt-20">
         <section class="py-10 md:py-16 bg-gray-900 text-white flex items-center justify-center overflow-hidden">
-            <div class="container mx-auto px-8 text-center max-w-6xl">
-                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-md">
+            <div class="container mx-auto px-4 md:px-8 text-center max-w-6xl">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-md">
                     News & <span class="text-[#F76902]">Updates</span>
                 </h1>
-                <p class="text-2xl md:text-3xl font-light leading-relaxed text-gray-300">
+                <p class="text-lg md:text-2xl font-light leading-relaxed text-gray-300">
                     Stay informed about my latest achievements and announcements.
                 </p>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-white overflow-hidden">
-            <div class="container mx-auto px-8">
+        <section class="py-12 md:py-16 lg:py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 md:px-8">
                 <div class="max-w-4xl mx-auto grid grid-cols-1 gap-6">
                     <!-- 2025 Section -->
                     <div class="text-3xl font-bold text-gray-900 mb-4">2025</div>
@@ -201,22 +219,22 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-8 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div class="mb-6 md:mb-0">
-                    <a href="index.html" class="text-3xl font-extrabold text-white hover:text-gray-300 transition duration-300">
-                        Your Name
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6 md:mb-8">
+                <div class="mb-4 md:mb-0">
+                    <a href="index.html" class="text-2xl md:text-3xl font-extrabold text-white hover:text-gray-300 transition duration-300">
+                        Ashutosh Kumar
                     </a>
-                    <p class="text-gray-400 text-base mt-3">&copy; 2025 Your Name. All rights reserved.</p>
+                    <p class="text-gray-400 text-sm md:text-base mt-2 md:mt-3">&copy; 2025 Ashutosh Kumar. All rights reserved.</p>
                 </div>
-                <div class="flex space-x-8">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Terms of Service</a>
+                <div class="flex space-x-4 md:space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-base md:text-lg">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-base md:text-lg">Terms of Service</a>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8">
-                <p class="text-gray-500 text-base">
+            <div class="border-t border-gray-700 pt-6 md:pt-8">
+                <p class="text-gray-500 text-sm md:text-base">
                     Crafted with <span class="text-[#F76902]">❤️</span> and a passion for [Your Field].
                 </p>
             </div>
