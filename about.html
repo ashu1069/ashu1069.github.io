@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ashutosh Kumar</title>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #FFFFFF; /* Pure white background */
+            color: #1A1A1A; /* Very dark gray/almost black for text */
+        }
+        /* Ensure the main content doesn't get hidden by fixed header */
+        html {
+            scroll-padding-top: 80px; /* Adjust based on header height */
+        }
+        /* Subtle background pattern for visual interest */
+        body {
+            background-image: radial-gradient(#F0F0F0 1px, transparent 1px), radial-gradient(#F0F0F0 1px, #FFFFFF 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom underline for navigation links on hover */
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #F76902; /* Orange accent */
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+
+        /* Custom shadow for prominent buttons - now softer */
+        .btn-elegant-shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+        }
+        .btn-elegant-shadow:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly more prominent on hover */
+        }
+
+        /* Custom shadow for the hero content box - now softer */
+        .shadow-soft-hero {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 ease-in-out border-b border-gray-100 shadow-sm">
+        <nav class="container mx-auto px-8 py-5 flex justify-between items-center">
+            <!-- Logo/Site Title -->
+            <a href="index.html" class="text-4xl font-extrabold text-gray-900 hover:text-[#F76902] transition duration-300 transform hover:scale-105">
+                Ashutosh Kumar
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="flex space-x-10">
+                <li><a href="index.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Home
+                </a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    About
+                </a></li>
+                <li><a href="news.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    News
+                </a></li>
+                <li><a href="blogs.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Blogs
+                </a></li>
+                <li><a href="projects.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Projects
+                </a></li>
+                <li><a href="index.html#contact-section" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Contact
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-10 md:py-16 bg-gray-900 text-white flex items-center justify-center overflow-hidden">
+            <div class="container mx-auto px-8 text-center max-w-6xl">
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-md">
+                    About <span class="text-[#F76902]">Me</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-light leading-relaxed text-gray-300">
+                    AI Researcher & Engineer | Passionate about Computer Vision & Generative AI
+                </p>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-40 bg-white overflow-hidden">
+            <div class="container mx-auto px-8 max-w-4xl">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-8 leading-tight">My Journey</h2>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        Hi! I'm currently pursuing my <span class="font-semibold">Master's in Artificial Intelligence</span> at Rochester Institute of Technology, NY, USA, with an expected graduation in December 2025. My academic foundation was built at <span class="font-semibold">IIT Roorkee</span>, where I completed my Bachelor's in Engineering Physics in 2023. This unique combination of physics and AI has given me a distinctive perspective on solving complex problems.
+                    </p>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        As an <span class="font-semibold">MLE Intern at Owl Autonomous Imaging</span>, I'm diving deep into the complex and challenging world of autonomous driving software system stack. My work encompasses the entire software stack, from sensor integration to perception systems. What excites me most is working on <span class="font-semibold">multimodal fusion</span> - combining data from various sensors like RGB-Thermal cameras, LiDAR, and IMU to create robust perception systems. I just love working on critical system design of autonomous vehicles, creating scenarios and figuring out innovative solutions to solve them.
+                    </p>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                        My research interests span multiple domains. For my master's thesis, I'm developing a <span class="font-semibold">multicriteria decision analysis framework</span> for global vaccine proposal prioritization. I'm also passionate about exploring <span class="font-semibold">cognitive science-inspired generative AI</span> and <span class="font-semibold">vision-language models</span> for sports applications. What drives me is not just building models, but creating solutions that can make a real impact - whether it's advancing technology for societal benefit or driving business innovation.
+                    </p>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                        Beyond academics and work, I'm an avid reader who enjoys exploring books across various genres. When I'm not immersed in technology, you'll find me on the cricket field or badminton court, where I channel my competitive spirit. For me, work is my hobby and hobby is my work - I find joy in both the technical challenges of AI and the personal growth that comes from diverse interests.
+                    </p>
+                    <div class="mt-12 text-center lg:text-left">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Areas of Expertise</h3>
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                            <span class="bg-gray-100 text-gray-800 text-lg font-medium px-6 py-3 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">Computer Vision</span>
+                            <span class="bg-gray-100 text-gray-800 text-lg font-medium px-6 py-3 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">Deep Learning</span>
+                            <span class="bg-gray-100 text-gray-800 text-lg font-medium px-6 py-3 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">Generative AI</span>
+                            <span class="bg-gray-100 text-gray-800 text-lg font-medium px-6 py-3 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">Autonomous Systems</span>
+                            <span class="bg-gray-100 text-gray-800 text-lg font-medium px-6 py-3 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">Multimodal Fusion</span>
+                            <span class="bg-gray-100 text-gray-800 text-lg font-medium px-6 py-3 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">Vision-Language Models</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-8 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-3xl font-extrabold text-white hover:text-gray-300 transition duration-300">
+                        Ashutosh Kumar
+                    </a>
+                    <p class="text-gray-400 text-base mt-3">&copy; 2025 Ashutosh Kumar. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Terms of Service</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-500 text-base">
+                    Crafted with <span class="text-[#F76902]">❤️</span> and a passion for AI.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Your Name's Portfolio</title>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #FFFFFF; /* Pure white background */
+            color: #1A1A1A; /* Very dark gray/almost black for text */
+        }
+        /* Ensure the main content doesn't get hidden by fixed header */
+        html {
+            scroll-padding-top: 80px; /* Adjust based on header height */
+        }
+        /* Subtle background pattern for visual interest */
+        body {
+            background-image: radial-gradient(#F0F0F0 1px, transparent 1px), radial-gradient(#F0F0F0 1px, #FFFFFF 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom underline for navigation links on hover */
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #F76902; /* Orange accent */
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+
+        /* Custom shadow for prominent buttons - now softer */
+        .btn-elegant-shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+        }
+        .btn-elegant-shadow:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly more prominent on hover */
+        }
+
+        /* Custom shadow for the hero content box - now softer */
+        .shadow-soft-hero {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 ease-in-out border-b border-gray-100 shadow-sm">
+        <nav class="container mx-auto px-8 py-5 flex justify-between items-center">
+            <!-- Logo/Site Title -->
+            <a href="index.html" class="text-4xl font-extrabold text-gray-900 hover:text-[#F76902] transition duration-300 transform hover:scale-105">
+                Ashutosh Kumar
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="flex space-x-10">
+                <li><a href="index.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Home
+                </a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    About
+                </a></li>
+                <li><a href="news.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    News
+                </a></li>
+                <li><a href="blogs.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Blogs
+                </a></li>
+                <li><a href="projects.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Projects
+                </a></li>
+                <li><a href="index.html#contact-section" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Contact
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-10 md:py-16 bg-gray-900 text-white flex items-center justify-center overflow-hidden">
+            <div class="container mx-auto px-8 text-center max-w-6xl">
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-md">
+                    News & <span class="text-[#F76902]">Updates</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-light leading-relaxed text-gray-300">
+                    Stay informed about my latest achievements and announcements.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-8">
+                <div class="max-w-4xl mx-auto grid grid-cols-1 gap-6">
+                    <!-- 2025 Section -->
+                    <div class="text-3xl font-bold text-gray-900 mb-4">2025</div>
+
+                    <!-- News Item 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Paper Accepted at ICLR 2025</h2>
+                        <p class="text-gray-600 text-sm mb-2">March 2025</p>
+                        <p class="text-lg text-gray-700">
+                            Research paper accepted at ICLR 2025. <a href="https://arxiv.org/abs/2502.02027" class="text-[#F76902] hover:underline">[Link]</a>
+                        </p>
+                    </div>
+
+                    <!-- News Item 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Paper Accepted at AAAI 2025</h2>
+                        <p class="text-gray-600 text-sm mb-2">February 2025</p>
+                        <p class="text-lg text-gray-700">
+                            Research paper accepted at AAAI 2025. <a href="https://arxiv.org/abs/2406.12644" class="text-[#F76902] hover:underline">[Link]</a>
+                        </p>
+                    </div>
+
+                    <!-- News Item 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Published Paper on IndicMMLU-Pro</h2>
+                        <p class="text-gray-600 text-sm mb-2">January 2025</p>
+                        <p class="text-lg text-gray-700">
+                            Published "IndicMMLU-Pro: Benchmarking Indic Large Language Models on Multi-Task Language Understanding". <a href="https://arxiv.org/abs/2501.15747" class="text-[#F76902] hover:underline">[Link]</a>
+                        </p>
+                    </div>
+
+                    <!-- News Item 4 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Joined Owl Autonomous Imaging</h2>
+                        <p class="text-gray-600 text-sm mb-2">January 2025</p>
+                        <p class="text-lg text-gray-700">
+                            Started as MLE Intern, focusing on autonomous driving software stack and multimodal sensor fusion.
+                        </p>
+                    </div>
+
+                    <!-- 2024 Section -->
+                    <div class="text-3xl font-bold text-gray-900 mb-4">2024</div>
+
+                    <!-- News Item 5 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Paper Accepted at IEEE</h2>
+                        <p class="text-gray-600 text-sm mb-2">December 2024</p>
+                        <p class="text-lg text-gray-700">
+                            Research paper accepted at IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/10786501" class="text-[#F76902] hover:underline">[Link]</a>
+                        </p>
+                    </div>
+
+                    <!-- News Item 6 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Won IBM TechXchange Hackathon</h2>
+                        <p class="text-gray-600 text-sm mb-2">October 2024</p>
+                        <p class="text-lg text-gray-700">
+                            Top winner at IBM TechXchange Hackathon, invited to showcase Generative AI solutions in Las Vegas, NV.
+                        </p>
+                    </div>
+
+                    <!-- News Item 7 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Awarded AWARE AI Fellowship</h2>
+                        <p class="text-gray-600 text-sm mb-2">August 2024</p>
+                        <p class="text-lg text-gray-700">
+                            Selected for AWARE AI Fellowship in the AI hardware track.
+                        </p>
+                    </div>
+
+                    <!-- News Item 8 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Published Article on LLM Security</h2>
+                        <p class="text-gray-600 text-sm mb-2">January 2024</p>
+                        <p class="text-lg text-gray-700">
+                            Published "The Ethics of Interaction: Mitigating Security Threats in LLMs" (50+ citations). <a href="https://arxiv.org/abs/2401.12273" class="text-[#F76902] hover:underline">[Link]</a>
+                        </p>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <p class="text-gray-700 text-lg">Stay tuned for more updates!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-8 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-3xl font-extrabold text-white hover:text-gray-300 transition duration-300">
+                        Your Name
+                    </a>
+                    <p class="text-gray-400 text-base mt-3">&copy; 2025 Your Name. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Terms of Service</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-500 text-base">
+                    Crafted with <span class="text-[#F76902]">❤️</span> and a passion for [Your Field].
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

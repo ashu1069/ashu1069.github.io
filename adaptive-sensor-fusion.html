@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Sensor Fusion - Your Name's Portfolio</title>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #FFFFFF;
+            color: #1A1A1A;
+        }
+        html {
+            scroll-padding-top: 80px;
+        }
+        body {
+            background-image: radial-gradient(#F0F0F0 1px, transparent 1px), radial-gradient(#F0F0F0 1px, #FFFFFF 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #F76902;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+        .btn-elegant-shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        .btn-elegant-shadow:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .shadow-soft-hero {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 ease-in-out border-b border-gray-100 shadow-sm">
+        <nav class="container mx-auto px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-4xl font-extrabold text-gray-900 hover:text-[#F76902] transition duration-300 transform hover:scale-105">
+                Ashutosh Kumar
+            </a>
+            <ul class="flex space-x-10">
+                <li><a href="index.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Home</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">About</a></li>
+                <li><a href="news.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">News</a></li>
+                <li><a href="blogs.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Blogs</a></li>
+                <li><a href="projects.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Projects</a></li>
+                <li><a href="index.html#contact-section" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Contact
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-10 md:py-16 bg-gray-900 text-white flex items-center justify-center overflow-hidden">
+            <div class="container mx-auto px-8 text-center max-w-6xl">
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-md">
+                    Adaptive <span class="text-[#F76902]">Sensor Fusion</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-light leading-relaxed text-gray-300">
+                    Robust Perception for Autonomous Vehicles
+                </p>
+                <div class="mt-8">
+                    <span class="inline-block bg-gray-700 text-white text-lg font-medium px-6 py-2 rounded-lg shadow-sm">Date: November 2023</span>
+                    <span class="inline-block bg-gray-700 text-white text-lg font-medium px-6 py-2 rounded-lg shadow-sm ml-4">Category: Autonomous Vehicles</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-40 bg-white overflow-hidden">
+            <div class="container mx-auto px-8 max-w-5xl">
+                <!-- Project Overview -->
+                <div class="mb-16 bg-gray-50 p-10 rounded-lg shadow-md border border-gray-100">
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-8">Overview</h2>
+                    <img src="images/adaptive-sensor-fusion-main.jpg" alt="Adaptive Sensor Fusion Main Image" class="rounded-lg shadow-md w-full h-auto object-cover mb-10 border border-gray-100">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        This project implements advanced sensor fusion techniques for autonomous vehicles, focusing on robust perception in varying environmental conditions. The system adaptively combines data from multiple sensors to ensure reliable object detection and tracking.
+                    </p>
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        By implementing sophisticated algorithms for sensor data integration, the project addresses the challenges of maintaining accurate perception in diverse driving scenarios.
+                    </p>
+                </div>
+
+                <!-- Technologies Used -->
+                <div class="mb-16 bg-gray-50 p-10 rounded-lg shadow-md border border-gray-100">
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-8">Technologies Used</h2>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <span class="bg-gray-100 text-gray-800 text-xl font-medium px-8 py-4 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">Python</span>
+                        <span class="bg-gray-100 text-gray-800 text-xl font-medium px-8 py-4 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">ROS</span>
+                        <span class="bg-gray-100 text-gray-800 text-xl font-medium px-8 py-4 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">OpenCV</span>
+                        <span class="bg-gray-100 text-gray-800 text-xl font-medium px-8 py-4 rounded-lg shadow-sm transition-all duration-300 hover:bg-gray-200 hover:scale-105">TensorFlow</span>
+                    </div>
+                </div>
+
+                <!-- Features and Functionality -->
+                <div class="mb-16 bg-gray-50 p-10 rounded-lg shadow-md border border-gray-100">
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-8">Features & Functionality</h2>
+                    <ul class="list-disc list-inside text-xl text-gray-700 leading-relaxed pl-4 space-y-4">
+                        <li>Multi-sensor data fusion</li>
+                        <li>Adaptive perception algorithms</li>
+                        <li>Real-time object detection and tracking</li>
+                        <li>Environmental condition adaptation</li>
+                    </ul>
+                    <img src="images/adaptive-sensor-fusion-screenshot1.jpg" alt="Adaptive Sensor Fusion Screenshot 1" class="rounded-lg shadow-md w-full h-auto object-cover mt-10 mb-6 border border-gray-100">
+                    <img src="images/adaptive-sensor-fusion-screenshot2.jpg" alt="Adaptive Sensor Fusion Screenshot 2" class="rounded-lg shadow-md w-full h-auto object-cover border border-gray-100">
+                </div>
+
+                <!-- Challenges and Learnings -->
+                <div class="mb-16 bg-gray-50 p-10 rounded-lg shadow-md border border-gray-100">
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-8">Challenges & Learnings</h2>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        The main challenge was developing algorithms that could effectively handle sensor data inconsistencies and varying environmental conditions while maintaining real-time performance.
+                    </p>
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        The project significantly enhanced my understanding of sensor fusion techniques and their application in autonomous vehicle perception systems.
+                    </p>
+                </div>
+
+                <!-- Project Links -->
+                <div class="text-center mt-16">
+                    <h2 class="text-5xl font-extrabold text-gray-900 mb-8">View the Project</h2>
+                    <div class="flex flex-col md:flex-row justify-center gap-8">
+                        <a href="https://github.com/ashu1069/Adaptive-Sensor-Fusion-in-AVs" target="_blank" class="inline-block bg-gray-900 text-white font-bold py-4 px-12 rounded-lg btn-elegant-shadow hover:bg-gray-800 transition duration-300 transform hover:-translate-y-1 text-xl">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Back to Projects -->
+                <div class="text-center mt-20">
+                    <a href="projects.html" class="inline-flex items-center text-gray-800 hover:text-[#F76902] font-semibold text-xl transition-all duration-300 transform hover:-translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 mr-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                        </svg>
+                        Back to All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-8 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-3xl font-extrabold text-white hover:text-gray-300 transition duration-300">
+                        Your Name
+                    </a>
+                    <p class="text-gray-400 text-base mt-3">&copy; 2025 Your Name. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Terms of Service</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-500 text-base">
+                    Crafted with <span class="text-[#F76902]">❤️</span> and a passion for Autonomous Vehicles.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Your Name's Portfolio</title>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #FFFFFF; /* Pure white background */
+            color: #1A1A1A; /* Very dark gray/almost black for text */
+        }
+        /* Ensure the main content doesn't get hidden by fixed header */
+        html {
+            scroll-padding-top: 80px; /* Adjust based on header height */
+        }
+        /* Subtle background pattern for visual interest */
+        body {
+            background-image: radial-gradient(#F0F0F0 1px, transparent 1px), radial-gradient(#F0F0F0 1px, #FFFFFF 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom underline for navigation links on hover */
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #F76902; /* Orange accent */
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+
+        /* Custom shadow for prominent buttons - now softer */
+        .btn-elegant-shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+        }
+        .btn-elegant-shadow:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly more prominent on hover */
+        }
+
+        /* Custom shadow for the hero content box - now softer */
+        .shadow-soft-hero {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 ease-in-out border-b border-gray-100 shadow-sm">
+        <nav class="container mx-auto px-8 py-5 flex justify-between items-center">
+            <!-- Logo/Site Title -->
+            <a href="index.html" class="text-4xl font-extrabold text-gray-900 hover:text-[#F76902] transition duration-300 transform hover:scale-105">
+                Ashutosh Kumar
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="flex space-x-10">
+                <li><a href="index.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Home
+                </a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    About
+                </a></li>
+                <li><a href="news.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    News
+                </a></li>
+                <li><a href="blogs.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Blogs
+                </a></li>
+                <li><a href="projects.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Projects
+                </a></li>
+                <li><a href="index.html#contact-section" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">
+                    Contact
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-10 md:py-16 bg-gray-900 text-white flex items-center justify-center overflow-hidden">
+            <div class="container mx-auto px-8 text-center max-w-6xl">
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-md">
+                    My <span class="text-[#F76902]">Blog</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-light leading-relaxed text-gray-300">
+                    Insights, tutorials, and reflections on my learning journey.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-40 bg-white overflow-hidden">
+            <div class="container mx-auto px-8">
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Why Multi-Modal Image Fusion is Not Straightforward</h2>
+                            <p class="text-gray-600 text-sm mb-3">Published on Medium</p>
+                            <img src="images/multimodal.webp" alt="Multi-Modal Image Fusion" class="rounded-md mb-4 w-full h-auto object-cover border border-gray-100">
+                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                                Exploring the complexities and challenges in multi-modal image fusion, discussing why this seemingly straightforward task requires careful consideration and advanced techniques.
+                            </p>
+                        </div>
+                        <a href="https://medium.com/@ashu1069/why-multi-modal-image-fusion-is-not-straightforward-f7114638f0af" target="_blank" class="inline-block mt-auto text-[#F76902] hover:underline font-semibold text-base transition-all duration-300 transform hover:translate-x-1">Read on Medium &rarr;</a>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Ever Thought About Tokenizers Much?</h2>
+                            <p class="text-gray-600 text-sm mb-3">Published on Medium</p>
+                            <img src="images/tokenizers.webp" alt="Tokenizers" class="rounded-md mb-4 w-full h-auto object-cover border border-gray-100">
+                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                                A deep dive into the world of tokenizers, exploring their importance in natural language processing and how they shape the way machines understand human language.
+                            </p>
+                        </div>
+                        <a href="https://medium.com/@ashu1069/ever-thought-about-tokenizers-much-61d9590b1c3d" target="_blank" class="inline-block mt-auto text-[#F76902] hover:underline font-semibold text-base transition-all duration-300 transform hover:translate-x-1">Read on Medium &rarr;</a>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Image Recognition Using PCA</h2>
+                            <p class="text-gray-600 text-sm mb-3">Published on Medium</p>
+                            <img src="images/pca.webp" alt="PCA Image Recognition" class="rounded-md mb-4 w-full h-auto object-cover border border-gray-100">
+                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                                Understanding how Principal Component Analysis (PCA) can be applied to image recognition tasks, exploring dimensionality reduction and feature extraction techniques.
+                            </p>
+                        </div>
+                        <a href="https://medium.com/@ashu1069/image-recognition-using-pca-0a2cb14508fc" target="_blank" class="inline-block mt-auto text-[#F76902] hover:underline font-semibold text-base transition-all duration-300 transform hover:translate-x-1">Read on Medium &rarr;</a>
+                    </div>
+
+                    <!-- Blog Post 4 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-2">PageRank Algorithm & Linear Algebra</h2>
+                            <p class="text-gray-600 text-sm mb-3">Published on Medium</p>
+                            <img src="images/pagerank.webp" alt="PageRank Algorithm" class="rounded-md mb-4 w-full h-auto object-cover border border-gray-100">
+                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                                Exploring the mathematical foundations of the PageRank algorithm through the lens of linear algebra, understanding how it revolutionized web search.
+                            </p>
+                        </div>
+                        <a href="https://medium.com/@ashu1069/pagerank-algorithm-linear-algebra-cea39a887bd7" target="_blank" class="inline-block mt-auto text-[#F76902] hover:underline font-semibold text-base transition-all duration-300 transform hover:translate-x-1">Read on Medium &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- View All Blogs Button -->
+                <div class="text-center mt-16">
+                    <a href="https://medium.com/@ashu1069" target="_blank" class="inline-block bg-[#F76902] text-white font-bold py-4 px-12 rounded-lg btn-elegant-shadow hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 text-xl">
+                        View All Blogs on Medium
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-8 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-3xl font-extrabold text-white hover:text-gray-300 transition duration-300">
+                        Your Name
+                    </a>
+                    <p class="text-gray-400 text-base mt-3">&copy; 2025 Your Name. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg">Terms of Service</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-500 text-base">
+                    Crafted with <span class="text-[#F76902]">❤️</span> and a passion for [Your Field].
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
