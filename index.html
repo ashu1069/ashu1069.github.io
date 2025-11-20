@@ -4,388 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashutosh Kumar</title>
-    <!-- Inter font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for the Inter font and smooth scrolling */
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #FFFFFF; /* Pure white background */
-            color: #1A1A1A; /* Very dark gray/almost black for text */
-            font-size: 15px;
-        }
-        /* Ensure the main content doesn't get hidden by fixed header */
-        html {
-            scroll-padding-top: 80px; /* Adjust based on header height */
-        }
-        /* Subtle background pattern for visual interest */
-        body {
-            background-image: radial-gradient(#F0F0F0 1px, transparent 1px), radial-gradient(#F0F0F0 1px, #FFFFFF 1px);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
-        }
-
-        /* Hide scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            display: none;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         body {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-
-        /* Custom underline for navigation links on hover */
-        .nav-link-underline::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #F76902; /* Orange accent */
-            transition: width 0.3s ease-in-out;
+        .nav {
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
         }
-        .nav-link-underline:hover::after {
-            width: 100%;
+        .nav a {
+            color: black;
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 14px;
         }
-
-        /* Custom shadow for prominent buttons - now softer */
-        .btn-elegant-shadow {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+        .nav a:hover {
+            color: blue;
         }
-        .btn-elegant-shadow:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly more prominent on hover */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
         }
-
-        /* Custom shadow for the hero content box - now softer */
-        .shadow-soft-hero {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+        .header img {
+            height: 150px;
+            width: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 2px;
+            flex-shrink: 0;
         }
-        h1 {
-            font-size: 1.7rem;
+        .header-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-info h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        .header-info p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 4px;
         }
         h2 {
-            font-size: 1.2rem;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        h3 {
-            font-size: 1rem;
+        .section {
+            margin-bottom: 50px;
         }
-        p, li, ul {
-            font-size: 0.92rem;
+        .section p {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+        }
+        .news-item .paper-title {
+            font-weight: normal;
+            margin-bottom: 4px;
+        }
+        .news-item .paper-title a {
+            color: black;
+            text-decoration: none;
+        }
+        .news-item .paper-title a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+        .news-item .meta {
+            font-size: 13px;
+            color: #666;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .links {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        .links a {
+            margin-right: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
-<body class="text-gray-900 overflow-x-hidden">
+<body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blog</a>
+        <a href="projects.html">Projects</a>
+    </nav>
 
-    <!-- Header Section -->
-    <header class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 ease-in-out border-b border-gray-100 shadow-sm">
-        <nav class="container mx-auto px-2 md:px-4 py-3 flex justify-between items-center relative">
-            <!-- Logo/Site Title -->
-            <a href="index.html" class="text-2xl md:text-4xl font-extrabold text-gray-900 hover:text-[#F76902] transition duration-300 transform hover:scale-105">
-                Ashutosh Kumar
-            </a>
-
-            <!-- Hamburger Icon (Mobile) -->
-            <button id="mobile-menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-700 border-gray-300 hover:text-[#F76902] focus:outline-none" aria-label="Open Menu">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-
-            <!-- Navigation Links -->
-            <ul id="desktop-nav" class="hidden md:flex space-x-6 lg:space-x-10">
-                <li><a href="index.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Home</a></li>
-                <li><a href="about.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">About</a></li>
-                <li><a href="news.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">News</a></li>
-                <li><a href="blogs.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Blogs</a></li>
-                <li><a href="projects.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Projects</a></li>
-                <li><a href="#contact-section" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Contact</a></li>
-            </ul>
-            <!-- Mobile Menu -->
-            <div id="mobile-nav" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-100 z-50 hidden">
-                <ul class="flex flex-col py-4 space-y-2 px-6">
-                    <li><a href="index.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Home</a></li>
-                    <li><a href="about.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">About</a></li>
-                    <li><a href="news.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">News</a></li>
-                    <li><a href="blogs.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Blogs</a></li>
-                    <li><a href="projects.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Projects</a></li>
-                    <li><a href="#contact-section" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('mobile-menu-button');
-        const mobileNav = document.getElementById('mobile-nav');
-        menuBtn.addEventListener('click', () => {
-            mobileNav.classList.toggle('hidden');
-        });
-        // Optional: close menu on link click
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.add('hidden');
-            });
-        });
-    </script>
-
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-gray-900 text-white py-10 md:py-16 flex flex-col md:flex-row items-center justify-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-10">
-            <!-- Dynamic background with subtle gradient overlay -->
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-950 to-black opacity-90"></div>
-            <!-- Example of a subtle, aesthetically pleasing SVG background pattern -->
-            <svg class="w-full h-full object-cover" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="hero-pattern-circles" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                        <circle cx="2" cy="2" r="1" fill="#333333" />
-                    </pattern>
-                </defs>
-                <rect x="0" y="0" width="100" height="100" fill="url(#hero-pattern-circles)" />
-            </svg>
+    <div class="header">
+        <img src="images/dp.jpg" alt="Ashutosh Kumar">
+        <div class="header-info">
+            <h1>Ashutosh Kumar</h1>
+            <p>MS, Artificial Intelligence</p>
+            <p>Rochester Institute of Technology, NY, USA (2023 - Expected December 2025)</p>
+            <p style="margin-top: 12px;">B.Tech, Engineering Physics</p>
+            <p>Indian Institute of Technology, Roorkee, IN (2019-2023)</p>
         </div>
-        <div class="container mx-auto px-2 md:px-4 flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-8">
-            <!-- Left side - Hero content -->
-            <div class="w-full lg:w-1/2 relative z-10 text-center lg:text-left mb-10 md:mb-0">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-md">
-                    Building <span class="text-[#F76902]">Impactful</span> Solutions.
-                </h1>
-                <a href="projects.html" class="inline-block bg-[#F76902] text-white font-bold py-2 md:py-3 px-6 md:px-8 rounded-lg btn-elegant-shadow hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 text-base md:text-lg">
-                    View My Work
-                </a>
-                <a href="https://drive.google.com/file/d/1IQcOjmRQEG1e9d24AK1rt7_OlEHhg1e7/view" target="_blank" class="inline-block mt-3 bg-[#F76902] text-white font-bold py-2 md:py-3 px-6 md:px-8 rounded-lg btn-elegant-shadow hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 text-base md:text-lg">
-                    View Resume
-                </a>
-            </div>
-            
-            <!-- Right side - About content -->
-            <div class="w-full lg:w-1/2 relative z-10 flex justify-center">
-                <div class="bg-black bg-opacity-60 backdrop-blur-sm rounded-xl shadow-soft-hero p-4 md:p-6 border border-gray-800 w-full max-w-md mt-12">
-                    <img src="images/dp.jpg" alt="Ashutosh Kumar's Profile Picture" class="rounded-lg shadow-md w-full h-auto object-cover border border-gray-200 transition-all duration-500 ease-out hover:scale-[1.02] mb-6">
-                    <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-4">About Me</h2>
-                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-                        Ashutosh Kumar | MLE & Robotics Intern @ <a href="https://www.owlai.us/" class="text-[#F76902] hover:text-[#F76902]/80 transition duration-300">OwlAI</a>
-                    </p>
-                    <a href="about.html" class="inline-block bg-[#F76902] text-white font-bold py-2 md:py-3 px-6 md:px-8 rounded-lg shadow-md hover:shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 text-base md:text-lg">
-                        Learn More
-                    </a>
-                </div>
-            </div>
+    </div>
+
+    <div class="links">
+        <p>
+            <a href="https://www.linkedin.com/in/ashutoshkumar1069/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/ashu1069" target="_blank">GitHub</a>
+            <a href="mailto:ak1825@rit.edu">Email</a>
+            <a href="https://x.com/ashu_1069" target="_blank">Twitter</a>
+            <a href="https://drive.google.com/file/d/1IQcOjmRQEG1e9d24AK1rt7_OlEHhg1e7/view" target="_blank">Resume</a>
+            <a href="https://huggingface.co/ashu1069" target="_blank">Hugging Face</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=4iXjBjoAAAAJ" target="_blank">Google Scholar</a>
+            <a href="https://medium.com/@ashu1069" target="_blank">Medium</a>
+            <a href="https://ashu1069.substack.com/" target="_blank">Substack</a>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Latest News</h2>
+        
+        <h3 style="font-size: 16px; margin-top: 30px; margin-bottom: 15px; font-weight: bold;">2026</h3>
+        <div class="news-item">
+            <div class="paper-title">Investigating Vaccine Buyers' Remorse</div>
+            <div class="meta">AAAI 2026 • January 2026</div>
         </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="featured-projects" class="py-6 md:py-8 lg:py-12 bg-gray-50">
-        <div class="container mx-auto px-2 md:px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-10 md:mb-20">Featured Projects</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                <!-- Project 1: Oracle -->
-                <div class="bg-white p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg flex flex-col h-full border border-gray-100 transform hover:-translate-y-1">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Uncomputable Oracle Optimizer</h3>
-                    <p class="text-[#F76902] text-lg font-medium mb-4">Bayesian Optimization, Computability, Risk-Aware AI</p>
-                    <p class="text-gray-700 mb-8 flex-grow leading-relaxed">
-                        A novel Bayesian optimization framework for black-box functions with uncertain or uncomputable outputs, integrating Gaussian process surrogates and halting probability modeling for risk-aware decision making in computationally intractable domains.
-                    </p>
-                    <div class="flex flex-wrap gap-3 justify-center">
-                        <a href="https://github.com/ashu1069/oracle" target="_blank" class="inline-flex items-center bg-gray-900 text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md hover:bg-gray-800 transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2: Perceptual Piercing -->
-                <div class="bg-white p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg flex flex-col h-full border border-gray-100 transform hover:-translate-y-1">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Perceptual Piercing</h3>
-                    <p class="text-[#F76902] text-lg font-medium mb-4">Vision Enhancement, Selective Dehazing, Object Detection</p>
-                    <p class="text-gray-700 mb-8 flex-grow leading-relaxed">
-                        An adaptive deep learning pipeline for object detection in adverse weather, leveraging selective region dehazing and human visual system-inspired attention to maintain accuracy in fog, haze, and clear conditions.
-                    </p>
-                    <div class="flex flex-wrap gap-3 justify-center">
-                        <a href="https://github.com/ashu1069/perceptual-piercing" target="_blank" class="inline-flex items-center bg-gray-900 text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md hover:bg-gray-800 transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            Code
-                        </a>
-                        <a href="https://arxiv.org/abs/2502.02027" target="_blank" class="inline-flex items-center bg-[#F76902] text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md hover:bg-opacity-90 transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-                            Paper
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3: HPT -->
-                <div class="bg-white p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg flex flex-col h-full border border-gray-100 transform hover:-translate-y-1">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">HPT</h3>
-                    <p class="text-[#F76902] text-lg font-medium mb-4">LLM Evaluation, Cognitive Taxonomy, Prompt Engineering</p>
-                    <p class="text-gray-700 mb-8 flex-grow leading-relaxed">
-                        A universal evaluation framework for large language models, introducing the Hierarchical Prompting Taxonomy (HPT) and Index (HPI) to benchmark cognitive complexity and prompt-based reasoning.
-                    </p>
-                    <div class="flex flex-wrap gap-3 justify-center">
-                        <a href="https://github.com/devichand579/HPT" target="_blank" class="inline-flex items-center bg-gray-900 text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md hover:bg-gray-800 transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            Code
-                        </a>
-                        <a href="https://arxiv.org/abs/2406.12644" target="_blank" class="inline-flex items-center bg-[#F76902] text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md hover:bg-opacity-90 transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-                            Paper
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <a href="projects.html" class="inline-block mt-24 bg-gray-900 text-white font-bold py-5 px-12 rounded-lg btn-elegant-shadow hover:bg-gray-800 transition duration-300 transform hover:-translate-y-1 text-xl">
-                View All Projects
-            </a>
+        
+        <h3 style="font-size: 16px; margin-top: 30px; margin-bottom: 15px; font-weight: bold;">2025</h3>
+        <div class="news-item">
+            <div class="paper-title">Toward Fair and Informed Vaccine Allocation using Data-Driven Approaches</div>
+            <div class="meta">INFORMS Annual Meeting • Invited Talk • October 2025</div>
         </div>
-    </section>
-
-    <!-- Latest News & Blog Posts Section -->
-    <section id="news-blogs-preview" class="py-6 md:py-8 lg:py-12 bg-white overflow-hidden">
-        <div class="container mx-auto px-2 md:px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-10 md:mb-20">Latest Updates</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-                <!-- Latest News Preview -->
-                <div class="bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg flex flex-col h-full border border-gray-100 transform hover:-translate-y-1">
-                    <h3 class="text-4xl font-bold text-gray-900 mb-8">Recent News</h3>
-                    <div class="text-left mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:pb-0">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Paper Accepted at AAAI 2026: Investigating Vaccine Buyers' Remorse</h4>
-                        <p class="text-gray-600 text-base mb-3">January 2026</p>
-                        <p class="text-gray-700 leading-relaxed">Research paper "Investigating Vaccine Buyers' Remorse" accepted at AAAI 2026.</p>
-                        <a href="news.html" class="text-[#F76902] hover:underline text-base mt-4 inline-block font-medium">Read more &rarr;</a>
-                    </div>
-                    <div class="text-left mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:pb-0">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Paper Accepted at ICLR 2025</h4>
-                        <p class="text-gray-600 text-base mb-3">March 2025</p>
-                        <p class="text-gray-700 leading-relaxed">Research paper accepted at ICLR 2025.</p>
-                        <a href="https://arxiv.org/abs/2502.02027" class="text-[#F76902] hover:underline text-base mt-4 inline-block font-medium">Read paper &rarr;</a>
-                    </div>
-                    <div class="text-left mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:pb-0">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Paper Accepted at AAAI 2025</h4>
-                        <p class="text-gray-600 text-base mb-3">February 2025</p>
-                        <p class="text-gray-700 leading-relaxed">Research paper accepted at AAAI 2025.</p>
-                        <a href="https://arxiv.org/abs/2406.12644" class="text-[#F76902] hover:underline text-base mt-4 inline-block font-medium">Read paper &rarr;</a>
-                    </div>
-                    <div class="text-left pb-8 last:border-b-0 last:pb-0">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Joined Owl Autonomous Imaging</h4>
-                        <p class="text-gray-600 text-base mb-3">January 2025</p>
-                        <p class="text-gray-700 leading-relaxed">Started as MLE Intern, focusing on autonomous driving software stack and multimodal sensor fusion.</p>
-                        <a href="news.html" class="text-[#F76902] hover:underline text-base mt-4 inline-block font-medium">Read more &rarr;</a>
-                    </div>
-                    <div class="mt-auto pt-10">
-                        <a href="news.html" class="inline-block bg-gray-900 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-800 transition duration-300 transform hover:-translate-y-1">
-                            View All News
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Latest Blog Posts Preview -->
-                <div class="bg-gray-50 p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg flex flex-col h-full border border-gray-100 transform hover:-translate-y-1">
-                    <h3 class="text-4xl font-bold text-gray-900 mb-8">Latest Blog Posts</h3>
-                    <div class="text-left mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:pb-0">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Why Multi-Modal Image Fusion is Not Straightforward</h4>
-                        <p class="text-gray-600 text-base mb-3">Published on Medium</p>
-                        <p class="text-gray-700 leading-relaxed">Exploring the complexities and challenges in multi-modal image fusion, discussing why this seemingly straightforward task requires careful consideration and advanced techniques.</p>
-                        <a href="https://medium.com/@ashu1069/why-multi-modal-image-fusion-is-not-straightforward-f7114638f0af" class="text-[#F76902] hover:underline text-base mt-4 inline-block font-medium">Read on Medium &rarr;</a>
-                    </div>
-                    <div class="text-left mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:pb-0">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Ever Thought About Tokenizers Much?</h4>
-                        <p class="text-gray-600 text-base mb-3">Published on Medium</p>
-                        <p class="text-gray-700 leading-relaxed">A deep dive into the world of tokenizers, exploring their importance in natural language processing and how they shape the way machines understand human language.</p>
-                        <a href="https://medium.com/@ashu1069/ever-thought-about-tokenizers-much-61d9590b1c3d" class="text-[#F76902] hover:underline text-base mt-4 inline-block font-medium">Read on Medium &rarr;</a>
-                    </div>
-                    <div class="text-left pb-8 last:border-b-0 last:pb-0">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Image Recognition Using PCA</h4>
-                        <p class="text-gray-600 text-base mb-3">Published on Medium</p>
-                        <p class="text-gray-700 leading-relaxed">Understanding how Principal Component Analysis (PCA) can be applied to image recognition tasks, exploring dimensionality reduction and feature extraction techniques.</p>
-                        <a href="https://medium.com/@ashu1069/image-recognition-using-pca-0a2cb14508fc" class="text-[#F76902] hover:underline text-base mt-4 inline-block font-medium">Read on Medium &rarr;</a>
-                    </div>
-                    <div class="mt-auto pt-10">
-                        <a href="https://medium.com/@ashu1069" target="_blank" class="inline-block bg-gray-900 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-800 transition duration-300 transform hover:-translate-y-1">
-                            View All Blogs on Medium
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="news-item">
+            <div class="paper-title"><a href="https://arxiv.org/abs/2406.12644" target="_blank">Hierarchical Prompting Taxonomy: A Universal Evaluation Framework for Large Language Models Aligned with Human Cognitive Principles</a></div>
+            <div class="meta">KDD Workshop on Prompt Optimization • July 2025</div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact-section" class="py-6 md:py-8 lg:py-12 bg-gray-100 overflow-hidden">
-        <div class="container mx-auto px-2 md:px-4 text-center max-w-3xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-8 md:mb-12">Get in Touch</h2>
-            <p class="text-lg md:text-xl text-gray-700 mb-6 md:mb-10">
-                Feel free to connect for collaborations or opportunities.
-            </p>
-            <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST" class="bg-white p-3 md:p-6 rounded-lg shadow-lg border border-gray-100">
-                <div class="mb-6 md:mb-8 text-left">
-                    <label for="name" class="block text-gray-700 text-base md:text-lg font-bold mb-2 md:mb-3">Name:</label>
-                    <input type="text" id="name" name="name" required class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 md:py-4 px-4 md:px-5 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-[#F76902] focus:border-[#F76902] transition duration-300 text-base md:text-lg">
-                </div>
-                <div class="mb-6 md:mb-8 text-left">
-                    <label for="email" class="block text-gray-700 text-base md:text-lg font-bold mb-2 md:mb-3">Email:</label>
-                    <input type="email" id="email" name="email" required class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 md:py-4 px-4 md:px-5 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-[#F76902] focus:border-[#F76902] transition duration-300 text-base md:text-lg">
-                </div>
-                <div class="mb-8 md:mb-10 text-left">
-                    <label for="message" class="block text-gray-700 text-base md:text-lg font-bold mb-2 md:mb-3">Message:</label>
-                    <textarea id="message" name="message" rows="5" required class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 md:py-4 px-4 md:px-5 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-[#F76902] focus:border-[#F76902] transition duration-300 text-base md:text-lg"></textarea>
-                </div>
-                <button type="submit" class="bg-[#F76902] text-white font-bold py-3 md:py-4 px-8 md:px-12 rounded-lg btn-elegant-shadow hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 text-lg md:text-xl w-full md:w-auto">
-                    Send Message
-                </button>
-            </form>
-            <div class="mt-8 md:mt-12 text-center text-gray-700">
-                <p class="text-lg md:text-xl mb-2 md:mb-4">You can also find me on:</p>
-                <div class="flex flex-wrap justify-center gap-2 md:gap-4">
-                    <a href="https://www.linkedin.com/in/ashutoshkumar1069/" target="_blank" class="flex items-center space-x-2 bg-white border border-gray-200 rounded-lg px-5 py-3 text-gray-800 hover:text-[#F76902] shadow-sm font-semibold transition duration-300 hover:scale-105">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.04 0 3.601 2.002 3.601 4.604v5.592z"/></svg>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/ashu1069" target="_blank" class="flex items-center space-x-2 bg-white border border-gray-200 rounded-lg px-5 py-3 text-gray-800 hover:text-[#F76902] shadow-sm font-semibold transition duration-300 hover:scale-105">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="mailto:ak1825@rit.edu" class="flex items-center space-x-2 bg-white border border-gray-200 rounded-lg px-5 py-3 text-gray-800 hover:text-[#F76902] shadow-sm font-semibold transition duration-300 hover:scale-105">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 13.065l-11.99-7.065v15c0 1.104.896 2 2 2h19.98c1.104 0 2-.896 2-2v-15l-11.99 7.065zm2 18H6V4h7v5h5v11a1 1 0 0 1-1 1z"/></svg>
-                        <span>Email</span>
-                    </a>
-                    <a href="https://x.com/ashu_1069" target="_blank" class="flex items-center space-x-2 bg-white border border-gray-200 rounded-lg px-5 py-3 text-gray-800 hover:text-[#F76902] shadow-sm font-semibold transition duration-300 hover:scale-105">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        <span>Twitter</span>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1IQcOjmRQEG1e9d24AK1rt7_OlEHhg1e7/view" target="_blank" class="flex items-center space-x-2 bg-white border border-gray-200 rounded-lg px-5 py-3 text-gray-800 hover:text-[#F76902] shadow-sm font-semibold transition duration-300 hover:scale-105">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 18H6V4h7v5h5v11a1 1 0 0 1-1 1z"/></svg>
-                        <span>Resume</span>
-                    </a>
-                    <a href="https://huggingface.co/ashu1069" target="_blank" class="flex items-center space-x-2 bg-white border border-gray-200 rounded-lg px-5 py-3 text-gray-800 hover:text-[#F76902] shadow-sm font-semibold transition duration-300 hover:scale-105">
-                        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" class="w-5 h-5">
-                        <span>Hugging Face</span>
-                    </a>
-                    <a href="https://scholar.google.com/citations?hl=en&user=4iXjBjoAAAAJ" target="_blank" class="flex items-center space-x-2 bg-white border border-gray-200 rounded-lg px-5 py-3 text-gray-800 hover:text-[#F76902] shadow-sm font-semibold transition duration-300 hover:scale-105">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
-                        <span>Google Scholar</span>
-                    </a>
-                    <a href="https://medium.com/@ashu1069" target="_blank" class="flex items-center space-x-2 bg-white border border-gray-200 rounded-lg px-5 py-3 text-gray-800 hover:text-[#F76902] shadow-sm font-semibold transition duration-300 hover:scale-105">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 6.52c.02-.2-.06-.4-.22-.53L.25 4.13V3.88h6.16l4.75 10.41 4.18-10.41h5.89v.25l-1.7 1.63c-.15.12-.22.31-.18.5v12.97c-.04.19.03.39.18.51l1.66 1.63v.25h-8.36v-.25l1.72-1.67c.17-.17.17-.22.17-.51V7.98l-4.8 12.03h-.65L3.43 7.98v8.7c-.05.36.07.72.34.97l2.24 2.72v.25H.22v-.25l2.24-2.72c.26-.25.38-.61.34-.97V6.52z"/></svg>
-                        <span>Medium</span>
-                    </a>
-                </div>
-            </div>
+        <div class="news-item">
+            <div class="paper-title"><a href="https://arxiv.org/abs/2502.02027" target="_blank">From Fog to Failure: The Unintended Consequences of Dehazing on Object Detection in Clear Images</a></div>
+            <div class="meta">ICLR 2025 • March 2025</div>
         </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-4 md:py-6">
-        <div class="container mx-auto px-2 md:px-4 text-center">
-            <div class="mb-2">
-                <a href="index.html" class="text-2xl md:text-3xl font-extrabold text-white hover:text-gray-300 transition duration-300">
-                    Ashutosh Kumar
-                </a>
-                <p class="text-gray-400 text-sm md:text-base mt-2 md:mt-3">&copy; 2025 Ashutosh Kumar. All rights reserved.</p>
-            </div>
+        <div class="news-item">
+            <div class="paper-title"><a href="https://arxiv.org/abs/2406.12644" target="_blank">Hierarchical Prompting Taxonomy: A Universal Evaluation Framework for Large Language Models Aligned with Human Cognitive Principles</a></div>
+            <div class="meta">AAAI 2025 • February 2025</div>
         </div>
-    </footer>
-
+        <div class="news-item">
+            <div class="paper-title"><a href="https://arxiv.org/abs/2501.15747" target="_blank">IndicMMLU-Pro: Benchmarking Indic Large Language Models on Multi-Task Language Understanding</a></div>
+            <div class="meta">Published • January 2025</div>
+        </div>
+        <div class="news-item">
+            <div class="paper-title">Machine Learning Engineer Intern at <a href="https://www.owlai.us/" target="_blank">Owl Autonomous Imaging</a></div>
+            <div class="meta">January 2025 • Developing autonomous driving software systems and multimodal sensor fusion algorithms</div>
+        </div>
+        
+        <h3 style="font-size: 16px; margin-top: 30px; margin-bottom: 15px; font-weight: bold;">2024</h3>
+        <div class="news-item">
+            <div class="paper-title"><a href="https://ieeexplore.ieee.org/abstract/document/10786501" target="_blank">MoonMetaSync: Hybrid Feature-Based Image Registration for Lunar Surface Analysis</a></div>
+            <div class="meta">IEEE • December 2024</div>
+        </div>
+        <div class="news-item">
+            <div class="paper-title">Top Winners at IBM TechXchange Hackathon</div>
+            <div class="meta">October 2024 • Invited to present Generative AI solutions at IBM's annual conference in Las Vegas, NV</div>
+        </div>
+        <div class="news-item">
+            <div class="paper-title">AWARE AI Fellowship Recipient</div>
+            <div class="meta">AI Hardware Track • August 2024</div>
+        </div>
+        <div class="news-item">
+            <div class="paper-title"><a href="https://arxiv.org/abs/2401.12273" target="_blank">The Ethics of Interaction: Mitigating Security Threats in LLMs</a></div>
+            <div class="meta">Published • January 2024</div>
+        </div>
+    </div>
 </body>
 </html>

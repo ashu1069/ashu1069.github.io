@@ -3,222 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Your Name's Portfolio</title>
-    <!-- Inter font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog - Ashutosh Kumar</title>
     <style>
-        /* Custom styles for the Inter font and smooth scrolling */
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #FFFFFF; /* Pure white background */
-            color: #1A1A1A; /* Very dark gray/almost black for text */
-            font-size: 15px;
-        }
-        /* Ensure the main content doesn't get hidden by fixed header */
-        html {
-            scroll-padding-top: 80px; /* Adjust based on header height */
-        }
-        /* Subtle background pattern for visual interest */
-        body {
-            background-image: radial-gradient(#F0F0F0 1px, transparent 1px), radial-gradient(#F0F0F0 1px, #FFFFFF 1px);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
-        }
-
-        /* Hide scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            display: none;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         body {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-
-        /* Custom underline for navigation links on hover */
-        .nav-link-underline::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #F76902; /* Orange accent */
-            transition: width 0.3s ease-in-out;
+        .nav {
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
         }
-        .nav-link-underline:hover::after {
-            width: 100%;
+        .nav a {
+            color: black;
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 14px;
         }
-
-        /* Custom shadow for prominent buttons - now softer */
-        .btn-elegant-shadow {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+        .nav a:hover {
+            color: blue;
         }
-        .btn-elegant-shadow:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly more prominent on hover */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
         }
-
-        /* Custom shadow for the hero content box - now softer */
-        .shadow-soft-hero {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+        .header img {
+            height: 150px;
+            width: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 2px;
+            flex-shrink: 0;
         }
-        h1 {
-            font-size: 2.2rem;
+        .header-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-info h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        .header-info p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 4px;
         }
         h2 {
-            font-size: 1.5rem;
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        h3 {
-            font-size: 1.15rem;
+        .blog-post {
+            margin-bottom: 40px;
         }
-        p, li, ul {
-            font-size: 1rem;
+        .blog-post h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        .blog-post p {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .links {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        .links a {
+            margin-right: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
-<body class="text-gray-900 overflow-x-hidden">
+<body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blog</a>
+        <a href="projects.html">Projects</a>
+    </nav>
 
-    <!-- Header Section -->
-    <header class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 ease-in-out border-b border-gray-100 shadow-sm">
-        <nav class="container mx-auto px-4 md:px-8 py-5 flex justify-between items-center relative">
-            <!-- Logo/Site Title -->
-            <a href="index.html" class="text-2xl md:text-4xl font-extrabold text-gray-900 hover:text-[#F76902] transition duration-300 transform hover:scale-105">
-                Ashutosh Kumar
-            </a>
-            <!-- Hamburger Icon (Mobile) -->
-            <button id="mobile-menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-700 border-gray-300 hover:text-[#F76902] focus:outline-none" aria-label="Open Menu">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            <!-- Navigation Links -->
-            <ul id="desktop-nav" class="hidden md:flex space-x-6 lg:space-x-10">
-                <li><a href="index.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Home</a></li>
-                <li><a href="about.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">About</a></li>
-                <li><a href="news.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">News</a></li>
-                <li><a href="blogs.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Blogs</a></li>
-                <li><a href="projects.html" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Projects</a></li>
-                <li><a href="index.html#contact-section" class="text-gray-700 hover:text-[#F76902] font-semibold text-lg transition duration-300 relative nav-link-underline">Contact</a></li>
-            </ul>
-            <!-- Mobile Menu -->
-            <div id="mobile-nav" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-100 z-50 hidden">
-                <ul class="flex flex-col py-4 space-y-2 px-6">
-                    <li><a href="index.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Home</a></li>
-                    <li><a href="about.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">About</a></li>
-                    <li><a href="news.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">News</a></li>
-                    <li><a href="blogs.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Blogs</a></li>
-                    <li><a href="projects.html" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Projects</a></li>
-                    <li><a href="index.html#contact-section" class="block py-2 text-gray-700 hover:text-[#F76902] font-semibold text-lg">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('mobile-menu-button');
-        const mobileNav = document.getElementById('mobile-nav');
-        menuBtn.addEventListener('click', () => {
-            mobileNav.classList.toggle('hidden');
-        });
-        // Optional: close menu on link click
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.add('hidden');
-            });
-        });
-    </script>
-
-    <main class="pt-20">
-        <section class="py-10 md:py-16 bg-gray-900 text-white flex items-center justify-center overflow-hidden">
-            <div class="container mx-auto px-4 md:px-8 text-center max-w-6xl">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-md">
-                    My <span class="text-[#F76902]">Blog</span>
-                </h1>
-                <p class="text-lg md:text-2xl font-light leading-relaxed text-gray-300">
-                    Insights, tutorials, and reflections on my learning journey.
-                </p>
-            </div>
-        </section>
-
-        <section class="py-16 md:py-24 lg:py-40 bg-white overflow-hidden">
-            <div class="container mx-auto px-4 md:px-8">
-                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                    <!-- Blog Post 1 -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
-                        <div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Why Multi-Modal Image Fusion is Not Straightforward</h2>
-                            <p class="text-gray-600 text-sm mb-3">Published on Medium</p>
-                            <img src="images/multimodal.webp" alt="Multi-Modal Image Fusion" class="rounded-md mb-4 w-full h-auto object-cover border border-gray-100">
-                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                                Exploring the complexities and challenges in multi-modal image fusion, discussing why this seemingly straightforward task requires careful consideration and advanced techniques.
-                            </p>
-                        </div>
-                        <a href="https://medium.com/@ashu1069/why-multi-modal-image-fusion-is-not-straightforward-f7114638f0af" target="_blank" class="inline-block mt-auto text-[#F76902] hover:underline font-semibold text-base transition-all duration-300 transform hover:translate-x-1">Read on Medium &rarr;</a>
-                    </div>
-
-                    <!-- Blog Post 2 -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
-                        <div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Ever Thought About Tokenizers Much?</h2>
-                            <p class="text-gray-600 text-sm mb-3">Published on Medium</p>
-                            <img src="images/tokenizers.webp" alt="Tokenizers" class="rounded-md mb-4 w-full h-auto object-cover border border-gray-100">
-                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                                A deep dive into the world of tokenizers, exploring their importance in natural language processing and how they shape the way machines understand human language.
-                            </p>
-                        </div>
-                        <a href="https://medium.com/@ashu1069/ever-thought-about-tokenizers-much-61d9590b1c3d" target="_blank" class="inline-block mt-auto text-[#F76902] hover:underline font-semibold text-base transition-all duration-300 transform hover:translate-x-1">Read on Medium &rarr;</a>
-                    </div>
-
-                    <!-- Blog Post 3 -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
-                        <div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Image Recognition Using PCA</h2>
-                            <p class="text-gray-600 text-sm mb-3">Published on Medium</p>
-                            <img src="images/pca.webp" alt="PCA Image Recognition" class="rounded-md mb-4 w-full h-auto object-cover border border-gray-100">
-                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                                Understanding how Principal Component Analysis (PCA) can be applied to image recognition tasks, exploring dimensionality reduction and feature extraction techniques.
-                            </p>
-                        </div>
-                        <a href="https://medium.com/@ashu1069/image-recognition-using-pca-0a2cb14508fc" target="_blank" class="inline-block mt-auto text-[#F76902] hover:underline font-semibold text-base transition-all duration-300 transform hover:translate-x-1">Read on Medium &rarr;</a>
-                    </div>
-
-                    <!-- Blog Post 4 -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100">
-                        <div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">PageRank Algorithm & Linear Algebra</h2>
-                            <p class="text-gray-600 text-sm mb-3">Published on Medium</p>
-                            <img src="images/pagerank.webp" alt="PageRank Algorithm" class="rounded-md mb-4 w-full h-auto object-cover border border-gray-100">
-                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                                Exploring the mathematical foundations of the PageRank algorithm through the lens of linear algebra, understanding how it revolutionized web search.
-                            </p>
-                        </div>
-                        <a href="https://medium.com/@ashu1069/pagerank-algorithm-linear-algebra-cea39a887bd7" target="_blank" class="inline-block mt-auto text-[#F76902] hover:underline font-semibold text-base transition-all duration-300 transform hover:translate-x-1">Read on Medium &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- View All Blogs Button -->
-                <div class="text-center mt-16">
-                    <a href="https://medium.com/@ashu1069" target="_blank" class="inline-block bg-[#F76902] text-white font-bold py-4 px-12 rounded-lg btn-elegant-shadow hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 text-xl">
-                        View All Blogs on Medium
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-8 md:py-12">
-        <div class="container mx-auto px-4 md:px-8 text-center">
-            <div class="mb-4">
-                <a href="index.html" class="text-2xl md:text-3xl font-extrabold text-white hover:text-gray-300 transition duration-300">
-                    Ashutosh Kumar
-                </a>
-                <p class="text-gray-400 text-sm md:text-base mt-2 md:mt-3">&copy; 2025 Ashutosh Kumar. All rights reserved.</p>
-            </div>
+    <div class="header">
+        <img src="images/dp.jpg" alt="Ashutosh Kumar">
+        <div class="header-info">
+            <h1>Ashutosh Kumar</h1>
+            <p>MS, Artificial Intelligence</p>
+            <p>Rochester Institute of Technology (2023 - Expected December 2025)</p>
+            <p style="margin-top: 12px;">B.Tech, Engineering Physics</p>
+            <p>Indian Institute of Technology (2019-2023)</p>
         </div>
-    </footer>
+    </div>
 
+    <div class="links">
+        <p>
+            <a href="https://www.linkedin.com/in/ashutoshkumar1069/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/ashu1069" target="_blank">GitHub</a>
+            <a href="mailto:ak1825@rit.edu">Email</a>
+            <a href="https://x.com/ashu_1069" target="_blank">Twitter</a>
+            <a href="https://drive.google.com/file/d/1IQcOjmRQEG1e9d24AK1rt7_OlEHhg1e7/view" target="_blank">Resume</a>
+            <a href="https://huggingface.co/ashu1069" target="_blank">Hugging Face</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=4iXjBjoAAAAJ" target="_blank">Google Scholar</a>
+            <a href="https://medium.com/@ashu1069" target="_blank">Medium</a>
+            <a href="https://ashu1069.substack.com/" target="_blank">Substack</a>
+        </p>
+    </div>
+
+    <h2>Blog Posts</h2>
+
+    <div class="blog-post">
+        <h3>Decoding "Defeating Nondeterminism in LLM Inference" by Thinking Machines</h3>
+        <p>An annotated breakdown of Horace He's deep dive into determinism in language models, with side quests into kernels, atomic adds, and batch invariance.</p>
+        <p><a href="https://ashu1069.substack.com/p/decoding-defeating-nondeterminism" target="_blank">Read &rarr;</a></p>
+    </div>
+
+    <div class="blog-post">
+        <h3>Game Theory in Self-Driving: Negotiator</h3>
+        <p>Exploring how game theory principles apply to autonomous vehicle decision-making and negotiation strategies.</p>
+        <p><a href="https://ashu1069.substack.com/p/game-theory-in-self-driving-negotiator" target="_blank">Read &rarr;</a></p>
+    </div>
+
+    <div class="blog-post">
+        <h3>What If a Problem is NP-Hard?</h3>
+        <p>Understanding NP-hard problems and practical approaches to tackle computationally intractable challenges.</p>
+        <p><a href="https://ashu1069.substack.com/p/what-if-a-problem-is-np-hard" target="_blank">Read &rarr;</a></p>
+    </div>
+
+    <div class="blog-post">
+        <h3>Functions, Variables, and Matrix Completion</h3>
+        <p>Exploring the connections between functions, variables, and matrix completion techniques in mathematical modeling.</p>
+        <p><a href="https://ashu1069.substack.com/p/functions-variables-and-matrix-completion" target="_blank">Read &rarr;</a></p>
+    </div>
+
+    <div class="blog-post">
+        <h3>Why Multi-Modal Image Fusion is Not Straightforward</h3>
+        <p>Exploring the complexities and challenges in multi-modal image fusion, discussing why this seemingly straightforward task requires careful consideration and advanced techniques.</p>
+        <p><a href="https://medium.com/@ashu1069/why-multi-modal-image-fusion-is-not-straightforward-f7114638f0af" target="_blank">Read &rarr;</a></p>
+    </div>
+
+    <div class="blog-post">
+        <h3>Ever Thought About Tokenizers Much?</h3>
+        <p>A deep dive into the world of tokenizers, exploring their importance in natural language processing and how they shape the way machines understand human language.</p>
+        <p><a href="https://medium.com/@ashu1069/ever-thought-about-tokenizers-much-61d9590b1c3d" target="_blank">Read &rarr;</a></p>
+    </div>
+
+    <div class="blog-post">
+        <h3>Image Recognition Using PCA</h3>
+        <p>Understanding how Principal Component Analysis (PCA) can be applied to image recognition tasks, exploring dimensionality reduction and feature extraction techniques.</p>
+        <p><a href="https://medium.com/@ashu1069/image-recognition-using-pca-0a2cb14508fc" target="_blank">Read &rarr;</a></p>
+    </div>
+
+    <div class="blog-post">
+        <h3>PageRank Algorithm & Linear Algebra</h3>
+        <p>Exploring the mathematical foundations of the PageRank algorithm through the lens of linear algebra, understanding how it revolutionized web search.</p>
+        <p><a href="https://medium.com/@ashu1069/pagerank-algorithm-linear-algebra-cea39a887bd7" target="_blank">Read &rarr;</a></p>
+    </div>
+
+    <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid #ddd;">
+        <p style="font-size: 14px; margin-bottom: 15px;">Read more blogs here:</p>
+        <p>
+            <a href="https://ashu1069.substack.com/" target="_blank">Substack</a>
+            <a href="https://medium.com/@ashu1069" target="_blank" style="margin-left: 20px;">Medium</a>
+        </p>
+    </div>
 </body>
 </html>
